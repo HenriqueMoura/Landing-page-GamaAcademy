@@ -9,6 +9,7 @@ html body{
   padding: 0;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 p, span,h1,h2,h3{
@@ -252,7 +253,30 @@ section#destaque{
   padding: 10px 20px 20px;
 
 }
+@media(max-width:768px){
+  #menu #logo{
+    width: 240px;
+  }
+  #menu h1{
+    font-size: 20px;
+  }
+  #menu ul{
+    width: 100%;
+  }
+  #menu li a{
+    padding: 0;
+  }
+  #destaque #noticia-destaque{
+    width: 100vw;
+  }
+  #destaque #noticia-destaque img{
+    width: 100vw;
+  }
+  #destaque #container{
+    display: none
+  }
 
+}
 @keyframes arrow-down {
   to   { bottom:0px;}
   from { bottom:10px;}
