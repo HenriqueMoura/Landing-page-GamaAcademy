@@ -10,11 +10,10 @@ html body{
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   overflow-x: hidden;
+  background-color: #F5F5F5;
 }
 
-p, span,h1,h2,h3{
-  color: white;
-}
+
 a{
   text-decoration: none;
   color: inherit; 
@@ -59,6 +58,7 @@ header{
   max-width: 50%;
   min-width: 300px;
   text-align: center;
+  color: white;
 }
 #menu h1 span{
   color: #CD4C4E;
@@ -126,85 +126,6 @@ header{
 }
 /* END HEADER */
 
-section#destaque{
-  width: 100%;
-  margin: 30px 0;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  
-}
-#destaque #noticia-destaque{
-  width: calc(100vw/2.5);
-}
-#destaque #noticia-destaque img{
-  width: calc(100vw/2.5);
-
-}
-
-#destaque .noticias{
-  width: calc(100vw/3.4);
-  display: flex;
-  align-items: flex-end;
-
-}
-#destaque .noticias img{
-  position: absolute;
-  width: calc(100vw/3.4);
-  height: 100%;
-  z-index: -1;
-  filter: brightness(40%);
-
-
-}
-#destaque #container{
-  display: flex;
-  flex-direction: column;
-}
-#destaque #container a{
-  width: 100%;
-}
-
-#destaque #container .noticias{
-  height: 50%;
-  margin-left: 20px;
-}
-#destaque #container .noticias img{
-  height: calc(50% - 5px);
-}
-#destaque #container .noticias + .noticias{
-  margin-top: 10px;
-}
-#destaque .text-container{
-  width: 100%;
-}
-#destaque .text-container {
-  padding: 10px 20px 20px 20px;
-}
-#destaque #container .text-container{
-  width: 100%;
-
-}
-#destaque  .text-container hr{
-  background: #CD4C4E;
-    border: none;
-    height: 1px;
-  margin-top: 0;
-}
-#destaque  .text-container span:first-child{
-  font-size: 12px;
-}
-#destaque .text-container h3{margin: 0 0 10px 0;}
-
-#destaque #container .text-container {padding: 5px 10px 20px 20px;}
-#destaque #container .text-container h3{font-size: 16px; margin-bottom: 5px;}
-#destaque #container .text-container span{
-  font-size: 12px;  
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* END DESTAQUE NOTICIAS  */
 #cards-noticias{
   display: flex;
@@ -222,7 +143,8 @@ section#destaque{
   color: black;
 }
 #cards-noticias .card p{
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 #cards-noticias .card {
@@ -230,9 +152,14 @@ section#destaque{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   padding-bottom: 30px;
+  margin: 10px 0;
+  background-color: #FFF;
+  border-radius: 6px;
 }
 #cards-noticias .card img{
   height: 150px;
+  border-radius: 6px 6px 0;
+  
   
 }
 
@@ -241,9 +168,10 @@ section#destaque{
 }
 
 #cards-noticias .block-container {
-  width: 1024px;
+  width: 80%;
   display: flex;
   justify-content: space-around;
+  
   flex-wrap: wrap;
   float: left;
   padding: 2px 16px;
@@ -251,7 +179,74 @@ section#destaque{
 }
 #cards-noticias .container{
   padding: 10px 20px 20px;
+  text-align: center;
+}
+.title,.block-container{
+  width: 100%;
+  margin: 0 auto;
+  text-emphasis: center;
+  align-items: center;
 
+}
+.title h2{
+  color: #CD4C4E;
+  font-size: 35px;
+  text-align: center;
+}
+.title p{
+  text-align: center;
+}
+#perfil{
+  margin: 40px 0;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+#perfil i{
+  font-size: 19px;
+  width: auto;
+}
+
+#perfil .content a:hover{color: #CD4C4E;}
+#perfil .content a{color: #9A999E}
+
+#perfil img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid #CD4C4E;
+
+}
+#perfil .block-container{
+  display: flex;
+  transition: 0.3s;
+  padding: 20px 30px;
+  margin: 10px 0;
+  background-color: #FFF;
+  border-radius: 6px;
+  margin: 0 0 40px 0;
+}
+#perfil .content{
+  padding-left: 20px;
+}
+#perfil .content p{
+  font-weight: 300;
+
+}
+#perfil .content b{color: #CD4C4E; padding-right: 3px;}
+
+form input{
+  border: none;
+  background-color: #F5F5F5;
+  height: 35px;
+  border-radius: 35px;
+  outline: none;
+  padding-left: 20px;
+}
+form input:last-child{
+  background: #CD4C4E;
+  color: white;
+  width: 60px;
+  padding: 0;
 }
 @media(max-width:768px){
   #menu #logo{
@@ -266,16 +261,14 @@ section#destaque{
   #menu li a{
     padding: 0;
   }
-  #destaque #noticia-destaque{
-    width: 100vw;
+  #perfil .block-container{
+    width: 80%;
+    min-width:300px;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
   }
-  #destaque #noticia-destaque img{
-    width: 100vw;
-  }
-  #destaque #container{
-    display: none
-  }
-
 }
 @keyframes arrow-down {
   to   { bottom:0px;}
