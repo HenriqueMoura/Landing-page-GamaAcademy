@@ -234,7 +234,7 @@ header{
 }
 #perfil .content b{color: #CD4C4E; padding-right: 3px;}
 
-form input{
+#perfil form input{
   border: none;
   background-color: #F5F5F5;
   height: 35px;
@@ -242,10 +242,10 @@ form input{
   outline: none;
   padding-left: 20px;
 }
-form input:last-child{
+#perfil form input:last-child{
   background: #CD4C4E;
   color: white;
-  width: 60px;
+  width: 150px;
   padding: 0;
 }
 @media(max-width:768px){
@@ -269,6 +269,9 @@ form input:last-child{
     padding: 10px;
     margin: 0 auto;
   }
+#perfil form input:last-child{
+  margin-top: 20px;
+}
 }
 @keyframes arrow-down {
   to   { bottom:0px;}
